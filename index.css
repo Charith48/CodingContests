@@ -1,0 +1,338 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.main-container{
+    display: flex;
+    justify-content:space-between;
+    margin:0;
+    width:100%;
+    height:fit-content;
+    background-color: black;
+    color:white;
+}
+.main-container>img{
+    height:100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding:2rem 2rem;
+    justify-content: space-between;
+}
+.content>a{
+    padding:0.7rem;
+    text-decoration: none;
+    background-color:white;
+    text-align: center;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+}
+.items{
+    display: flex;
+    flex-direction:column;
+    gap:1rem;   
+    /* border:1px solid red; */
+}
+h1>span{
+    color:red;
+}
+.items>p{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+h1{
+    font-size: 4.4rem;
+    
+}
+.platforms{
+    display: flex;
+    gap:1rem;
+}
+.platforms>button{
+    font-size: 1.4rem;
+    padding:0.9rem;
+    background: transparent;
+    border-radius: 1rem;
+}
+#btn1{
+    border:2px solid yellow;
+    color:yellow;
+}
+#btn2{
+    border:2px solid red;
+    color:red;
+}
+#btn3{
+    border:2px solid rgb(20, 223, 20);
+    color:rgb(20, 223, 20);
+}
+#btn4{
+    border:2px solid blue;
+    color:blue;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin:2rem;
+    border-bottom:3px solid red;
+    width:fit-content;
+    padding-bottom: 1.2rem;
+}
+
+
+.codeContestBlock{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+}
+.card{
+    padding:0;
+    background-color:#051e29;
+    color:white;
+    margin:2rem;
+    width:28%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap:0rem;
+    word-wrap: break-word;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border:1px solid red; */
+}
+.card>img{
+    width:100%;
+    height: fit-content;
+}
+/* .card:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    color:black;
+    background-color:white;
+    transition: background-color 0.5s;
+} */
+.info{
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.7rem;
+}
+.visit{
+    padding: 0.7rem;
+    margin:0;
+    display: flex;
+    justify-content: flex-start;
+}
+.visit>a{
+    font-size: 1.6rem;
+    padding:0.5rem 1rem;
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: rgb(105, 105, 248);
+    color: white;
+    border-radius: 0.2rem;
+}
+.visit>a:hover{
+    background: transparent;
+    color:rgb(105, 105, 248);
+    border:2px solid rgb(105, 105, 248);    
+    transition: background 0.8s;
+}
+.infoContent{
+    font-size: 1.3rem;
+    color: red;
+}
+h3{
+    font-size: 1.8rem;
+}
+footer{
+    width:100%;
+    height:25vh;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+}
+.Finfo{
+    /* padding:2rem; */
+    display: flex;
+    flex-direction: column;
+    /* gap:0.7rem; */
+}
+.Ficons{
+    /* padding:2rem; */
+    display: flex;
+    /* gap:0.9rem; */
+    font-size: 0.8rem;
+}
+.Fcopy{
+    /* padding:1.4rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color:grey;
+}
+@media (min-width:330px) and (max-width:576px){ 
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        margin:0;
+        width:100%;
+        height:fit-content;
+        background-color: black;
+        color:white;
+    }
+    .main-container > img{
+      display: none;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding:2rem;
+        justify-content: space-between;
+    }
+    .content>a{
+        margin:1rem;
+        padding:0.7rem;
+        text-decoration: none;
+        background-color:white;
+        text-align: center;
+        font-size: 1.3rem;
+        border-radius: 1rem;
+    }
+    .items>p{
+        font-size: 1.2em;
+        text-align: justify;
+    }
+    h1{
+        font-size: 3rem;
+        
+    }
+    .platforms{
+        margin:0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:1rem;
+    }
+    .platforms button{
+        width:100%;
+    }
+    #btn1{
+        border:2px solid yellow;
+        color:yellow;
+    }
+    #btn2{
+        border:2px solid red;
+        color:red;
+    }
+    #btn3{
+        border:2px solid rgb(20, 223, 20);
+        color:rgb(20, 223, 20);
+    }
+    #btn4{
+        border:2px solid blue;
+        color:blue;
+    }
+    h2{
+        font-size:2rem;
+        margin:2rem;
+        border-bottom:3px solid red;
+        width:fit-content;
+        padding-bottom: 1.2rem;
+    }
+    .codeContestBlock{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding:0;
+        justify-content: center;
+        background-color:#ffffff;
+    }
+    .card{
+        padding:0;
+        background-color: black;
+        color:white;
+        margin:2rem;
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        gap:0rem;
+        word-wrap: break-word;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 1rem;
+        overflow: hidden;
+        /* border:1px solid red; */
+    }
+    .card>img{
+    width:100%;
+    height: fit-content;
+    }
+    .info{
+        margin:0;
+        font-size:1rem;
+        padding:0.4rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap:0.4rem;
+    }
+    .info .infoContent{
+        font-size: 1rem;
+    }
+    .visit{
+        padding: 0.7rem;
+        margin-bottom:0.5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .visit>a{
+        font-size: 1rem;
+        padding:0.4rem 1rem;
+        border: 1px solid black;
+        text-decoration: none;
+        background-color: rgb(105, 105, 248);
+        color: white;
+        border-radius: 0.2rem;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+    footer{
+        padding:1.3rem 0.7rem;
+        width:100%;
+        height:fit-content;
+        background-color: black;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+    }
+    .Finfo{
+        /* padding:2rem; */
+        display: flex;
+        flex-direction: column;
+        font-size:0.6rem;
+        gap:0.3rem;
+    }
+    .Ficons{
+        /* padding:2rem; */
+        display: flex;
+        gap:0.5rem;
+        font-size:1rem;
+    }
+    .Fcopy{
+        /* padding:1.4rem; */
+        font-size: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color:grey;
+    }
+}
