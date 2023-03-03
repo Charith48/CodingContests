@@ -2,9 +2,7 @@ let imgSrc=[
     "https://contentstatic.techgig.com/photo/88751917/7-programming-languages-every-beginner-should-explore.jpg?35120",
     "https://6448316.fs1.hubspotusercontent-na1.net/hubfs/6448316/what-computer-programming-jobs-offer-remote-work-jpg.jpeg",
     "https://assets.entrepreneur.com/content/3x2/2000/1634062199-Ent-Python.jpg",
-    "https://res.cloudinary.com/grand-canyon-university/image/fetch/w_750,h_564,c_fill,g_faces,q_auto/https://www.gcu.edu/sites/default/files/2020-09/programming.jpg",
     "https://cdn.columbiauniversitybootcamp.com/wp-content/uploads/sites/108/2020/10/CDG_blog_post_image_02-850x412.jpg",
-    "https://www.codecademy.com/resources/blog/content/images/2020/07/what-is-a-programming-language.png",
     "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/02/best-programming-languages-to-learn.png",
     "https://appinventiv.com/wp-content/uploads/sites/1/2019/02/18-Programming-Languages-Redefining-The-Future-Of-Coding-scaled.webp",
     "https://www.herzing.edu/sites/default/files/styles/fp_960_480/public/2020-09/it_computer_programming.jpg.webp?itok=AKSaSh2O",
@@ -43,6 +41,23 @@ let imgSrc=[
     "https://www.forbes.com/advisor/wp-content/uploads/2022/06/computer_programming.jpeg.jpg",
     "https://www.cwjobs.co.uk/advice/wp-content/uploads/programmer-job-description-1024x576.jpg"
 ]
+function localTimeConverter(time){
+    const utcTime = new Date(time);
+    const utcTimestamp = utcTime.getTime();
+    const localOffset = new Date().getTimezoneOffset();
+    const localTimestamp = utcTimestamp - (localOffset * 60 * 1000);
+    const localTime = new Date(localTimestamp);
+    const localTimeString = localTime.toLocaleTimeString();
+    return localTimeString;
+    }
+function duration(time){
+const durationInSeconds = time;
+const hours = Math.floor(durationInSeconds / 3600);
+const minutes = Math.floor((durationInSeconds % 3600) / 60);
+const seconds = durationInSeconds % 60;
+return (`${hours} Hrs:${minutes} Mins:${seconds}:Secs`);
+
+}
 let container=document.querySelector(".codeContestBlock");
 let uri="https://kontests.net/api/v1/all";
 let p=fetch(uri);
@@ -50,14 +65,19 @@ p.then((response)=>{
     return response.json();
 }).then((response)=>{
     response.forEach((e,i)=>{
+        let lST=localTimeConverter(e.start_time);
+        let lET=localTimeConverter(e.end_time);
+        let dateSVal=e.start_time.slice(0,10);
+        let dateEVal=e.end_time.slice(0,10);
+        let dur=duration(e.duration);
         container.innerHTML+=`
     <div class="card">
         <img src="${imgSrc[i]}" alt="image">
         <div class="info">
             <h3>${e.name}</h3>
-            <p><span class="infoContent">START TIME</span>&nbsp;:&nbsp;&nbsp;${e.start_time}</p>
-            <p><span class="infoContent">END TIME</span>&nbsp;:&nbsp;&nbsp;${e.end_time}</p>
-            <p><span class="infoContent">DURATION</span>&nbsp;:&nbsp;&nbsp;${e.duration}</p>
+            <p><span class="infoContent">START TIME</span>&nbsp;:&nbsp;&nbsp;${dateSVal} at ${lST}</p>
+            <p><span class="infoContent">END TIME</span>&nbsp;:&nbsp;&nbsp;${dateEVal} at ${lET}</p>
+            <p><span class="infoContent">DURATION</span>&nbsp;:&nbsp;&nbsp;${dur}</p>
             <p><span class="infoContent">IN 24 HOURS</span>&nbsp;:&nbsp;&nbsp;${e.in_24_hours}</p>
             <p><span class="infoContent">STATUS</span>&nbsp;:&nbsp;&nbsp;${e.status}<p>
             <p><span class="infoContent">CONDUCTED BY</span>&nbsp;:&nbsp;&nbsp;${e.site}</p>            

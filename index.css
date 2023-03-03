@@ -40,16 +40,16 @@ body{
     gap:1rem;   
     /* border:1px solid red; */
 }
+h1{
+    font-size:0.1rem;
+    color:#032539;  
+}
 h1>span{
-    color:red;
+    color:#FBF3F2;
 }
 .items>p{
     font-size: 1.3rem;
     text-align: justify;
-}
-h1{
-    font-size: 4.4rem;
-    
 }
 .platforms{
     display: flex;
@@ -61,29 +61,17 @@ h1{
     background: transparent;
     border-radius: 1rem;
 }
-#btn1{
-    border:2px solid yellow;
-    color:yellow;
-}
-#btn2{
-    border:2px solid red;
-    color:red;
-}
-#btn3{
-    border:2px solid rgb(20, 223, 20);
-    color:rgb(20, 223, 20);
-}
-#btn4{
-    border:2px solid blue;
-    color:blue;
+button{
+    background-color: #FBF3F2;
 }
 
 h2{
     font-size: 2.5rem;
-    margin:2rem;
-    border-bottom:3px solid red;
+    margin:1rem;
+    color:#032539;
+    /* border-bottom:3px solid red; */
     width:fit-content;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -178,6 +166,9 @@ footer{
     justify-content: flex-end;
     color:grey;
 }
+
+
+
 @media (min-width:330px) and (max-width:576px){ 
     .main-container{
         display: flex;
@@ -186,17 +177,22 @@ footer{
         margin:0;
         width:100%;
         height:fit-content;
-        background-color: black;
-        color:white;
+        background-color: #FA991C;
+        color:#FBF3F2;
     }
     .main-container > img{
-      display: none;
+      width:28px;
     }
     .content{
         display: flex;
         flex-direction: column;
         padding:2rem;
         justify-content: space-between;
+    }
+    .content #topHeading{
+        font-size: 0.5rem;
+        color:grey;
+        text-align: center;
     }
     .content>a{
         margin:1rem;
@@ -208,45 +204,43 @@ footer{
         border-radius: 1rem;
     }
     .items>p{
-        font-size: 1.2em;
+        font-size: 1rem;
         text-align: justify;
     }
+    .items>h2{
+        color:#FBF3F2;
+    }
     h1{
-        font-size: 3rem;
-        
+        text-align: center;
+        font-size:2.2rem; 
+        color:#032539;
+    }
+    h1 span{
+        color:#FBF3F2
     }
     .platforms{
         margin:0.8rem;
         display: flex;
+        align-items: center;
         flex-direction: column;
         justify-content: center;
         gap:1rem;
     }
     .platforms button{
-        width:100%;
+        width:80%;
     }
-    #btn1{
-        border:2px solid yellow;
-        color:yellow;
-    }
-    #btn2{
-        border:2px solid red;
-        color:red;
-    }
-    #btn3{
-        border:2px solid rgb(20, 223, 20);
-        color:rgb(20, 223, 20);
-    }
-    #btn4{
-        border:2px solid blue;
-        color:blue;
+    button{
+        color:#032539;
+        border:none;
+        border-bottom:5px solid black;
     }
     h2{
         font-size:2rem;
         margin:2rem;
-        border-bottom:3px solid red;
+        /* border-bottom:3px solid red; */
+        color:#032539;
         width:fit-content;
-        padding-bottom: 1.2rem;
+        padding-bottom:0.5rem;
     }
     .codeContestBlock{
         width:100%;
@@ -254,14 +248,14 @@ footer{
         flex-wrap: wrap;
         padding:0;
         justify-content: center;
-        background-color:#ffffff;
     }
     .card{
         padding:0;
-        background-color: black;
-        color:white;
+        background-color:black;
+        color:#FA991C;
         margin:2rem;
         width:80%;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content:space-between;
@@ -285,7 +279,10 @@ footer{
         gap:0.4rem;
     }
     .info .infoContent{
+        padding:0.5rem;
         font-size: 1rem;
+        color:#FBF3F2;
+        border:2px solid black;
     }
     .visit{
         padding: 0.7rem;
