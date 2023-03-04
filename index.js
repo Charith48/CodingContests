@@ -55,7 +55,7 @@ const durationInSeconds = time;
 const hours = Math.floor(durationInSeconds / 3600);
 const minutes = Math.floor((durationInSeconds % 3600) / 60);
 const seconds = durationInSeconds % 60;
-return (`${hours} Hrs:${minutes} Mins:${seconds}:Secs`);
+return (`${hours} Hrs : ${minutes} Mins : ${seconds} : Secs`);
 
 }
 let container=document.querySelector(".codeContestBlock");
@@ -71,16 +71,16 @@ p.then((response)=>{
         let dateEVal=e.end_time.slice(0,10);
         let dur=duration(e.duration);
         container.innerHTML+=`
-    <div class="card">
+    <div class="card" data-aos="slide-up" data-aos-duration="5000">
         <img src="${imgSrc[i]}" alt="image">
         <div class="info">
             <h3>${e.name}</h3>
-            <p><span class="infoContent">START TIME</span>&nbsp;:&nbsp;&nbsp;${dateSVal} at ${lST}</p>
-            <p><span class="infoContent">END TIME</span>&nbsp;:&nbsp;&nbsp;${dateEVal} at ${lET}</p>
-            <p><span class="infoContent">DURATION</span>&nbsp;:&nbsp;&nbsp;${dur}</p>
-            <p><span class="infoContent">IN 24 HOURS</span>&nbsp;:&nbsp;&nbsp;${e.in_24_hours}</p>
-            <p><span class="infoContent">STATUS</span>&nbsp;:&nbsp;&nbsp;${e.status}<p>
-            <p><span class="infoContent">CONDUCTED BY</span>&nbsp;:&nbsp;&nbsp;${e.site}</p>            
+            <p data-aos="zoom-in" data-aos-duration="5000"><span class="infoContent">START TIME</span>${dateSVal} at ${lST}</p>
+            <p data-aos="zoom-in" data-aos-duration="5000"><span class="infoContent">END TIME</span>${dateEVal} at ${lET}</p>
+            <p data-aos="zoom-in" data-aos-duration="5000"><span class="infoContent">DURATION</span>${dur}</p>
+            <p data-aos="zoom-in" data-aos-duration="5000"><span class="infoContent">IN 24 HOURS</span>${e.in_24_hours}</p>
+            <p data-aos="zoom-in" data-aos-duration="5000"><span class="infoContent">STATUS</span>${e.status}</p>
+            <p data-aos="zoom-in" data-aos-duration="5000"><span class="infoContent">CONDUCTED BY</span>${e.site}</p>            
         </div>
         <div class="visit">
         <a href="${e.url}">Visit now </a>
