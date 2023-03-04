@@ -254,7 +254,8 @@ footer{
     }
     .start{
         margin:0;
-        padding:0;
+        padding-top: 1rem;
+        padding-bottom:3rem;
         display: flex;
         justify-content: center;
         /* gap:0.6rem; */
@@ -266,7 +267,7 @@ footer{
         font-size:3rem;
     }
     .codeContestBlock{
-        background-color: #FA991C;
+        background-color:#FBF3F2;
         width:100%;
         display: flex;
         flex-wrap: wrap;
